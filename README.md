@@ -1,4 +1,4 @@
-This is a simple macros for every edits. 
+These are simple macros for every edits. 
 Initially i made this for myself but now i am sharing it for free 
 
 How to use?
