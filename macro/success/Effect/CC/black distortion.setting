@@ -1,0 +1,34 @@
+{
+	Tools = ordered() {
+		blackdistortion = MacroOperator {
+			Inputs = ordered() {
+				MainInput1 = InstanceInput {
+					SourceOp = "Sharpen1",
+					Source = "Input",
+				},
+				Input1 = InstanceInput {
+					SourceOp = "Sharpen1",
+					Source = "Comments",
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Sharpen1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				Sharpen1 = Sharpen {
+					CtrlWZoom = false,
+					Inputs = {
+						XAmount = Input { Value = 100, },
+						Comments = Input { Value = "black distortion ", }
+					},
+					ViewInfo = OperatorInfo { Pos = { 440, 49.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "blackdistortion"
+}

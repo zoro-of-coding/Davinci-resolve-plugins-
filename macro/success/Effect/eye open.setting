@@ -1,0 +1,207 @@
+{
+	Tools = ordered() {
+		Eyeopen = MacroOperator {
+			Inputs = ordered() {
+				Input1 = InstanceInput {
+					SourceOp = "GaussianBlur1",
+					Source = "MotionBlur",
+					Default = 0,
+				},
+				Input2 = InstanceInput {
+					SourceOp = "GaussianBlur1",
+					Source = "Comments",
+				}
+			},
+			Outputs = {
+				Output1 = InstanceOutput {
+					SourceOp = "Path1",
+					Source = "Heading",
+				},
+				MainOutput1 = InstanceOutput {
+					SourceOp = "GaussianBlur1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				Rectangle1 = RectangleMask {
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						SoftEdge = Input {
+							SourceOp = "Rectangle1SoftEdge",
+							Source = "Value",
+						},
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input {
+							SourceOp = "Path1",
+							Source = "Position",
+						},
+						Width = Input { Value = 1, },
+						Height = Input {
+							SourceOp = "Rectangle1Height",
+							Source = "Value",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 16.5 } },
+				},
+				Rectangle1SoftEdge = BezierSpline {
+					SplineColor = { Red = 234, Green = 243, Blue = 3 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[17] = { 0.04, RH = { 18, 0.0266666666666667 }, Flags = { Linear = true } },
+						[20] = { 0, LH = { 19, 0.0133333333333333 }, Flags = { Linear = true } }
+					}
+				},
+				Path1 = PolyPath {
+					DrawMode = "InsertAndModify",
+					CtrlWZoom = false,
+					Inputs = {
+						Displacement = Input {
+							SourceOp = "Path1Displacement",
+							Source = "Value",
+						},
+						PolyLine = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, LockY = true, X = 0, Y = 0, RX = 0, RY = 0 },
+									{ Linear = true, LockY = true, X = 0, Y = 0, LX = 0, LY = 0 }
+								}
+							},
+						}
+					},
+				},
+				Path1Displacement = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[18] = { 0, RH = { 18.6666666666667, 0.333333333333333 }, Flags = { Linear = true, LockedY = true } },
+						[20] = { 1, LH = { 19.3333333333333, 0.666666666666667 }, Flags = { Linear = true, LockedY = true } }
+					}
+				},
+				Rectangle1Height = BezierSpline {
+					SplineColor = { Red = 0, Green = 255, Blue = 255 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[1] = { 0, RH = { 7.14, 0.37 }, Flags = { Linear = true } },
+						[20] = { 1, LH = { 8.28, 0.959999999999999 } }
+					}
+				},
+				MediaIn1 = MediaIn {
+					ExtentSet = true,
+					CustomData = {
+						MediaProps = {
+							MEDIA_AUDIO_TRACKS_DESC = {
+								{
+									MEDIA_AUDIO_BIT_DEPTH = 32,
+									MEDIA_AUDIO_FRAME_RATE = 24,
+									MEDIA_AUDIO_NUM_CHANNELS = 2,
+									MEDIA_AUDIO_SAMPLE_RATE = 48000,
+									MEDIA_AUDIO_START_TIME = 0,
+									MEDIA_AUDIO_TRACK_ID = "Timeline Audio",
+									MEDIA_AUDIO_TRACK_NAME = "Timeline Audio [Timeline 1]"
+								}
+							},
+							MEDIA_AUDIO_TRACKS_NUM = 1,
+							MEDIA_HAS_AUDIO = true,
+							MEDIA_HEIGHT = 1080,
+							MEDIA_IS_SOURCE_RES = false,
+							MEDIA_MARK_IN = 0,
+							MEDIA_MARK_OUT = 119,
+							MEDIA_NAME = "Adjustment Clip",
+							MEDIA_NUM_FRAMES = 120,
+							MEDIA_PAR = 1,
+							MEDIA_SRC_FRAME_RATE = 24,
+							MEDIA_START_FRAME = 0,
+							MEDIA_WIDTH = 1920,
+						},
+					},
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Rectangle1",
+							Source = "Mask",
+						},
+						GlobalOut = Input { Value = 119, },
+						AudioTrack = Input { Value = FuID { "Timeline Audio" }, },
+						Layer = Input { Value = "0", },
+						ClipTimeEnd = Input { Value = 119, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						DeepOutputMode = Input {
+							Value = 0,
+							Disabled = true,
+						},
+						LeftAudio = Input {
+							SourceOp = "Left",
+							Source = "Data",
+						},
+						RightAudio = Input {
+							SourceOp = "Right",
+							Source = "Data",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 55, 49.5 } },
+					Version = 1
+				},
+				Left = AudioDisplay {
+					CtrlWZoom = false,
+				},
+				Right = AudioDisplay {
+					CtrlWZoom = false,
+				},
+				GaussianBlur1 = ofx.com.blackmagicdesign.resolvefx.GaussianBlur {
+					CtrlWZoom = false,
+					Inputs = {
+						Source = Input {
+							SourceOp = "MediaIn1",
+							Source = "Output",
+						},
+						HStrength = Input {
+							SourceOp = "GaussianBlur1Strength",
+							Source = "Value",
+						},
+						VStrength = Input { Value = 0.400000005960464, },
+						Gang = Input { Value = 1, },
+						relativeHGroup = Input { Value = 0, },
+						relativeHR = Input { Value = 1, },
+						relativeHG = Input { Value = 1, },
+						relativeHB = Input { Value = 1, },
+						relativeHA = Input { Value = 1, },
+						relativeVGroup = Input { Value = 0, },
+						relativeVR = Input { Value = 1, },
+						relativeVG = Input { Value = 1, },
+						relativeVB = Input { Value = 1, },
+						relativeVA = Input { Value = 1, },
+						advancedControlsGroup = Input { Value = 0, },
+						BorderType = Input { Value = FuID { "BORDER_TYPE_REFLECT" }, },
+						isBlurAlpha = Input { Value = 1, },
+						BlendAmount = Input { Value = 0, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						IsNoTemporalFramesReqd = Input { Value = 0, },
+						refreshTrigger = Input { Value = 1, },
+						srcProcessingAlphaMode = Input { Value = 1, },
+						dstProcessingAlphaMode = Input { Value = 1, },
+						resolvefxVersion = Input { Value = "3.0", },
+						Comments = Input { Value = "WAKE UP TO REALITY 🫨\n\nThis animation is only 20 frames .\n\nHow to use ?\nans . Delete the median1 node and add this and connect to media out1.\nIf also have another media use merge node .", }
+					},
+					ViewInfo = OperatorInfo { Pos = { 220, 49.5 } },
+				},
+				GaussianBlur1Strength = BezierSpline {
+					SplineColor = { Red = 242, Green = 58, Blue = 8 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[1] = { 0.551, RH = { 8, 0.367333333333333 }, Flags = { Linear = true } },
+						[22] = { 0, LH = { 15, 0.183666666666667 }, Flags = { Linear = true } }
+					}
+				}
+			},
+		}
+	},
+	ActiveTool = "Eyeopen"
+}

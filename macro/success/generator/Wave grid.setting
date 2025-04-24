@@ -1,0 +1,158 @@
+{
+	Tools = ordered() {
+		Wavegrid = MacroOperator {
+			Inputs = ordered() {
+				Input1 = InstanceInput {
+					SourceOp = "Grid1",
+					Source = "linecolorRed",
+					Name = "Line Color",
+					ControlGroup = 1,
+					Default = 1,
+				},
+				Input2 = InstanceInput {
+					SourceOp = "Grid1",
+					Source = "linecolorGreen",
+					Name = "Line Color",
+					ControlGroup = 1,
+					Default = 1,
+				},
+				Input3 = InstanceInput {
+					SourceOp = "Grid1",
+					Source = "linecolorBlue",
+					Name = "Line Color",
+					ControlGroup = 1,
+					Default = 1,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopLeftAlpha",
+					ControlGroup = 2,
+					Default = 1,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopRightAlpha",
+					ControlGroup = 3,
+					Default = 1,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomLeftAlpha",
+					ControlGroup = 4,
+					Default = 1,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "BottomRightAlpha",
+					ControlGroup = 5,
+					Default = 1,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "Waviness1",
+					Source = "scale",
+					Default = 9.4,
+				},
+				Input9 = InstanceInput {
+					SourceOp = "Waviness1",
+					Source = "strength",
+					Default = 15,
+				},
+				Input10 = InstanceInput {
+					SourceOp = "Waviness1",
+					Source = "phase",
+					Default = 0,
+				},
+				Input11 = InstanceInput {
+					SourceOp = "Waviness1",
+					Source = "speed",
+					Default = 0.200000002980232,
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Waviness1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				Grid1 = ofx.com.blackmagicdesign.resolvefx.Grid {
+					Inputs = {
+						Source = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+						vernum = Input { Value = 12, },
+						hornum = Input { Value = 20, },
+						majorspace = Input { Value = 4, },
+						lineprop = Input { Value = 1, },
+						linecolorRed = Input { Value = 1, },
+						linecolorGreen = Input { Value = 1, },
+						linecolorBlue = Input { Value = 1, },
+						horwidth = Input { Value = 0.2, },
+						verwidth = Input { Value = 0.2, },
+						majorwidth = Input { Value = 1, },
+						tranform = Input { Value = 1, },
+						pan = Input { Value = 0, },
+						tilt = Input { Value = 0, },
+						zoom = Input { Value = 1, },
+						rotate = Input { Value = 0, },
+						gridwidth = Input { Value = 1, },
+						gridheight = Input { Value = 1, },
+						ShearX = Input { Value = 0, },
+						ShearY = Input { Value = 0, },
+						pitch = Input { Value = 0, },
+						yaw = Input { Value = 0, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						IsNoTemporalFramesReqd = Input { Value = 0, },
+						refreshTrigger = Input { Value = 1, },
+						srcProcessingAlphaMode = Input { Value = -1, },
+						dstProcessingAlphaMode = Input { Value = -1, },
+						resolvefxVersion = Input { Value = "1.0", }
+					},
+					ViewInfo = OperatorInfo { Pos = { 385, 49.5 } },
+				},
+				Background1 = Background {
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 275, 49.5 } },
+				},
+				Waviness1 = ofx.com.blackmagicdesign.resolvefx.Waviness {
+					CtrlWZoom = false,
+					Inputs = {
+						Source = Input {
+							SourceOp = "Grid1",
+							Source = "Output",
+						},
+						wavinessType = Input { Value = FuID { "WAVINESS_TYPE_VERTICAL" }, },
+						scale = Input { Value = 9.4, },
+						strength = Input { Value = 15, },
+						phase = Input { Value = 0, },
+						animate = Input { Value = 1, },
+						speed = Input { Value = 0.200000002980232, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						IsNoTemporalFramesReqd = Input { Value = 0, },
+						refreshTrigger = Input { Value = 1, },
+						srcProcessingAlphaMode = Input { Value = -1, },
+						dstProcessingAlphaMode = Input { Value = -1, },
+						resolvefxVersion = Input { Value = "1.2", }
+					},
+					ViewInfo = OperatorInfo { Pos = { 550, 49.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "Wavegrid"
+}

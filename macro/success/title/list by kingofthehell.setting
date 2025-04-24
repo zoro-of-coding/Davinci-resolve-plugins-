@@ -1,0 +1,615 @@
+{
+	Tools = ordered() {
+		listbykingofthehell = MacroOperator {
+			Inputs = ordered() {
+				Input1 = InstanceInput {
+					SourceOp = "Text2",
+					Source = "StyledText",
+				},
+				Input2 = InstanceInput {
+					SourceOp = "Text2",
+					Source = "Font",
+					ControlGroup = 2,
+				},
+				Input3 = InstanceInput {
+					SourceOp = "Text2",
+					Source = "Style",
+					ControlGroup = 2,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "Text2",
+					Source = "Red1Clone",
+					Name = "Color",
+					ControlGroup = 3,
+					Default = 1,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "Text2",
+					Source = "Green1Clone",
+					ControlGroup = 3,
+					Default = 1,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "Text2",
+					Source = "Blue1Clone",
+					ControlGroup = 3,
+					Default = 1,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "Text2",
+					Source = "Alpha1Clone",
+					ControlGroup = 3,
+					Default = 1,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "Text2",
+					Source = "Size",
+					Default = 0.08,
+				},
+				Input9 = InstanceInput {
+					SourceOp = "Text3",
+					Source = "StyledText",
+				},
+				Input10 = InstanceInput {
+					SourceOp = "Text3",
+					Source = "Font",
+					ControlGroup = 6,
+				},
+				Input11 = InstanceInput {
+					SourceOp = "Text3",
+					Source = "Style",
+					ControlGroup = 6,
+				},
+				Input12 = InstanceInput {
+					SourceOp = "Text3",
+					Source = "Red1Clone",
+					Name = "Color",
+					ControlGroup = 7,
+					Default = 1,
+				},
+				Input13 = InstanceInput {
+					SourceOp = "Text3",
+					Source = "Green1Clone",
+					ControlGroup = 7,
+					Default = 1,
+				},
+				Input14 = InstanceInput {
+					SourceOp = "Text3",
+					Source = "Blue1Clone",
+					ControlGroup = 7,
+					Default = 1,
+				},
+				Input15 = InstanceInput {
+					SourceOp = "Text3",
+					Source = "Alpha1Clone",
+					ControlGroup = 7,
+					Default = 1,
+				},
+				Input16 = InstanceInput {
+					SourceOp = "Text3",
+					Source = "Size",
+					Default = 0.08,
+				},
+				Input17 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "StyledText",
+				},
+				Input18 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Font",
+					ControlGroup = 10,
+				},
+				Input19 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Style",
+					ControlGroup = 10,
+				},
+				Input20 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Red1Clone",
+					Name = "Color",
+					ControlGroup = 11,
+					Default = 0,
+				},
+				Input21 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Green1Clone",
+					ControlGroup = 11,
+					Default = 0.8352941176471,
+				},
+				Input22 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Blue1Clone",
+					ControlGroup = 11,
+					Default = 1,
+				},
+				Input23 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Alpha1Clone",
+					ControlGroup = 11,
+					Default = 1,
+				},
+				Input24 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Size",
+					Default = 0.08,
+				},
+				Input25 = InstanceInput {
+					SourceOp = "Text4",
+					Source = "StyledText",
+				},
+				Input26 = InstanceInput {
+					SourceOp = "Text4",
+					Source = "Font",
+					ControlGroup = 14,
+				},
+				Input27 = InstanceInput {
+					SourceOp = "Text4",
+					Source = "Style",
+					ControlGroup = 14,
+				},
+				Input28 = InstanceInput {
+					SourceOp = "Text4",
+					Source = "Red1Clone",
+					Name = "Color",
+					ControlGroup = 15,
+					Default = 1,
+				},
+				Input29 = InstanceInput {
+					SourceOp = "Text4",
+					Source = "Green1Clone",
+					ControlGroup = 15,
+					Default = 1,
+				},
+				Input30 = InstanceInput {
+					SourceOp = "Text4",
+					Source = "Blue1Clone",
+					ControlGroup = 15,
+					Default = 1,
+				},
+				Input31 = InstanceInput {
+					SourceOp = "Text4",
+					Source = "Alpha1Clone",
+					ControlGroup = 15,
+					Default = 1,
+				},
+				Input32 = InstanceInput {
+					SourceOp = "Text4",
+					Source = "Size",
+					Default = 0.08,
+				},
+				Input33 = InstanceInput {
+					SourceOp = "Text5",
+					Source = "StyledText",
+				},
+				Input34 = InstanceInput {
+					SourceOp = "Text5",
+					Source = "Font",
+					ControlGroup = 18,
+				},
+				Input35 = InstanceInput {
+					SourceOp = "Text5",
+					Source = "Style",
+					ControlGroup = 18,
+				},
+				Input36 = InstanceInput {
+					SourceOp = "Text5",
+					Source = "Red1Clone",
+					Name = "Color",
+					ControlGroup = 19,
+					Default = 1,
+				},
+				Input37 = InstanceInput {
+					SourceOp = "Text5",
+					Source = "Green1Clone",
+					ControlGroup = 19,
+					Default = 1,
+				},
+				Input38 = InstanceInput {
+					SourceOp = "Text5",
+					Source = "Blue1Clone",
+					ControlGroup = 19,
+					Default = 1,
+				},
+				Input39 = InstanceInput {
+					SourceOp = "Text5",
+					Source = "Alpha1Clone",
+					ControlGroup = 19,
+					Default = 1,
+				},
+				Input40 = InstanceInput {
+					SourceOp = "Text5",
+					Source = "Size",
+					Default = 0.08,
+				},
+				Input41 = InstanceInput {
+					SourceOp = "Text6",
+					Source = "StyledText",
+				},
+				Input42 = InstanceInput {
+					SourceOp = "Text6",
+					Source = "Font",
+					ControlGroup = 22,
+				},
+				Input43 = InstanceInput {
+					SourceOp = "Text6",
+					Source = "Style",
+					ControlGroup = 22,
+				},
+				Input44 = InstanceInput {
+					SourceOp = "Text6",
+					Source = "Red1Clone",
+					Name = "Color",
+					ControlGroup = 23,
+					Default = 1,
+				},
+				Input45 = InstanceInput {
+					SourceOp = "Text6",
+					Source = "Green1Clone",
+					ControlGroup = 23,
+					Default = 1,
+				},
+				Input46 = InstanceInput {
+					SourceOp = "Text6",
+					Source = "Blue1Clone",
+					ControlGroup = 23,
+					Default = 1,
+				},
+				Input47 = InstanceInput {
+					SourceOp = "Text6",
+					Source = "Alpha1Clone",
+					ControlGroup = 23,
+					Default = 1,
+				},
+				Input48 = InstanceInput {
+					SourceOp = "Text6",
+					Source = "Size",
+					Default = 0.08,
+				},
+				Input49 = InstanceInput {
+					SourceOp = "Text7",
+					Source = "StyledText",
+				},
+				Input50 = InstanceInput {
+					SourceOp = "Text7",
+					Source = "Font",
+					ControlGroup = 26,
+				},
+				Input51 = InstanceInput {
+					SourceOp = "Text7",
+					Source = "Style",
+					ControlGroup = 26,
+				},
+				Input52 = InstanceInput {
+					SourceOp = "Text7",
+					Source = "Red1Clone",
+					Name = "Color",
+					ControlGroup = 27,
+					Default = 1,
+				},
+				Input53 = InstanceInput {
+					SourceOp = "Text7",
+					Source = "Green1Clone",
+					ControlGroup = 27,
+					Default = 1,
+				},
+				Input54 = InstanceInput {
+					SourceOp = "Text7",
+					Source = "Blue1Clone",
+					ControlGroup = 27,
+					Default = 1,
+				},
+				Input55 = InstanceInput {
+					SourceOp = "Text7",
+					Source = "Alpha1Clone",
+					ControlGroup = 27,
+					Default = 1,
+				},
+				Input56 = InstanceInput {
+					SourceOp = "Text7",
+					Source = "Size",
+					Default = 0.08,
+				}
+			},
+			Outputs = {
+				Output1 = InstanceOutput {
+					SourceOp = "Path1",
+					Source = "Heading",
+				},
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Shadow1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				Text2 = TextPlus {
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Center = Input { Value = { 0.18, 0.6 }, },
+						LayoutRotation = Input { Value = 1, },
+						TransformRotation = Input { Value = 1, },
+						Softness1 = Input { Value = 1, },
+						StyledText = Input { Value = "Item 1", },
+						Font = Input { Value = "Open Sans", },
+						Style = Input { Value = "Bold", },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 385, 16.5 } },
+				},
+				SoftGlow1 = SoftGlow {
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						Threshold = Input { Value = 0.1, },
+						Gain = Input { Value = 5, },
+						XGlowSize = Input { Value = 88.2, },
+						BlueScale = Input { Value = 1.78, },
+						Input = Input {
+							SourceOp = "Text1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 550, -16.5 } },
+				},
+				Merge1 = Merge {
+					Inputs = {
+						Background = Input {
+							SourceOp = "SoftGlow1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Text2",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 550, 16.5 } },
+				},
+				Text3 = TextPlus {
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Center = Input { Value = { 0.18, 0.5 }, },
+						LayoutRotation = Input { Value = 1, },
+						TransformRotation = Input { Value = 1, },
+						Softness1 = Input { Value = 1, },
+						StyledText = Input { Value = "Item 2", },
+						Font = Input { Value = "Open Sans", },
+						Style = Input { Value = "Bold", },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 440, 49.5 } },
+				},
+				Text1 = TextPlus {
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Center = Input { Value = { 0.13, 0.8 }, },
+						LayoutRotation = Input { Value = 1, },
+						TransformRotation = Input { Value = 1, },
+						ElementShape1 = Input { Value = 1, },
+						Red1 = Input { Value = 0, },
+						Green1 = Input { Value = 0.8352941176471, },
+						Softness1 = Input { Value = 1, },
+						StyledText = Input { Value = "LIST", },
+						Font = Input { Value = "Open Sans", },
+						Style = Input { Value = "Bold", },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 550, -49.5 } },
+				},
+				Merge2 = Merge {
+					Inputs = {
+						Background = Input {
+							SourceOp = "Merge1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Text3",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 605, 49.5 } },
+				},
+				Text4 = TextPlus {
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Center = Input { Value = { 0.18, 0.4 }, },
+						LayoutRotation = Input { Value = 1, },
+						TransformRotation = Input { Value = 1, },
+						Softness1 = Input { Value = 1, },
+						StyledText = Input { Value = "Item 3", },
+						Font = Input { Value = "Open Sans", },
+						Style = Input { Value = "Bold", },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 495, 82.5 } },
+				},
+				Text5 = TextPlus {
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Center = Input { Value = { 0.18, 0.3 }, },
+						LayoutRotation = Input { Value = 1, },
+						TransformRotation = Input { Value = 1, },
+						Softness1 = Input { Value = 1, },
+						StyledText = Input { Value = "Item 4", },
+						Font = Input { Value = "Open Sans", },
+						Style = Input { Value = "Bold", },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 550, 115.5 } },
+				},
+				Merge3 = Merge {
+					Inputs = {
+						Background = Input {
+							SourceOp = "Merge2",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Text4",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 660, 82.5 } },
+				},
+				Merge4 = Merge {
+					Inputs = {
+						Background = Input {
+							SourceOp = "Merge3",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Text5",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 715, 115.5 } },
+				},
+				Text6 = TextPlus {
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Center = Input { Value = { 0.18, 0.2 }, },
+						LayoutRotation = Input { Value = 1, },
+						TransformRotation = Input { Value = 1, },
+						Softness1 = Input { Value = 1, },
+						StyledText = Input { Value = "Item 5", },
+						Font = Input { Value = "Open Sans", },
+						Style = Input { Value = "Bold", },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 605, 148.5 } },
+				},
+				Merge5 = Merge {
+					Inputs = {
+						Background = Input {
+							SourceOp = "Merge4",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Text6",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 770, 148.5 } },
+				},
+				Text7 = TextPlus {
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						Center = Input { Value = { 0.18, 0.1 }, },
+						LayoutRotation = Input { Value = 1, },
+						TransformRotation = Input { Value = 1, },
+						Softness1 = Input { Value = 1, },
+						StyledText = Input { Value = "Item 6", },
+						Font = Input { Value = "Open Sans", },
+						Style = Input { Value = "Bold", },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 660, 181.5 } },
+				},
+				Merge6 = Merge {
+					Inputs = {
+						Background = Input {
+							SourceOp = "Merge5",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Text7",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 825, 181.5 } },
+				},
+				Transform1 = Transform {
+					Inputs = {
+						MotionBlur = Input { Value = 1, },
+						Quality = Input { Value = 10, },
+						ShutterAngle = Input { Value = 360, },
+						Center = Input {
+							SourceOp = "Path1",
+							Source = "Position",
+						},
+						Input = Input {
+							SourceOp = "Merge6",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 935, 181.5 } },
+				},
+				Path1 = PolyPath {
+					DrawMode = "InsertAndModify",
+					CtrlWZoom = false,
+					Inputs = {
+						Displacement = Input {
+							SourceOp = "Path1Displacement",
+							Source = "Value",
+						},
+						PolyLine = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, LockY = true, X = -0.356190476190476, Y = 0, RX = 0.118730158730159, RY = 0 },
+									{ Linear = true, LockY = true, X = 0, Y = 0, LX = -0.118730158730159, LY = 0, RX = 0, RY = 0 },
+									{ Linear = true, LockY = true, X = 0, Y = 0, LX = 0, LY = 0, RX = -0.131428571428571, RY = 0 },
+									{ Linear = true, LockY = true, X = -0.394285714285714, Y = 0, LX = 0.131428571428571, LY = 0 }
+								}
+							},
+						}
+					},
+				},
+				Path1Displacement = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 3.3333259987635, 0 }, Flags = { LockedY = true } },
+						[10] = { 0.247991681837557, LH = { 9.99996319971742, 0.0978367789886529 }, RH = { 10, 0.54040582271371 } },
+						[27] = { 0.474619289340101, LH = { 21.3333200927705, 0.474619289340101 }, RH = { 50, 0.474619289340101 }, Flags = { LockedY = true } },
+						[96] = { 0.474619289340101, LH = { 73, 0.474619289340101 }, RH = { 102.666695362538, 0.474619289340101 }, Flags = { LockedY = true } },
+						[116] = { 1, LH = { 109.333364030758, 1 }, Flags = { LockedY = true } }
+					}
+				},
+				Shadow1 = Shadow {
+					CtrlWZoom = false,
+					Inputs = {
+						Softness = Input { Value = 0.05, },
+						Input = Input {
+							SourceOp = "Transform1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 1100, 181.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "listbykingofthehell"
+}

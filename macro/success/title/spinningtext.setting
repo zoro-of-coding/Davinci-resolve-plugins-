@@ -1,0 +1,388 @@
+{
+	Tools = ordered() {
+		spinningtext = MacroOperator {
+			Inputs = ordered() {
+				Input1 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Green",
+					ControlGroup = 1,
+					Default = 1,
+				},
+				Input2 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Blue",
+					ControlGroup = 1,
+					Default = 1,
+				},
+				Input3 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Alpha",
+					ControlGroup = 1,
+					Default = 1,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Threshold",
+					Default = 1,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "Gain",
+					Default = 2.165,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "XGlowSize",
+					Default = 31.5,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "BlendClone",
+					Default = 1,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "RedScale",
+					Default = 1,
+				},
+				Input9 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "GreenScale",
+					Default = 1,
+				},
+				Input10 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "BlueScale",
+					Default = 1,
+				},
+				Input11 = InstanceInput {
+					SourceOp = "SoftGlow1",
+					Source = "AlphaScale",
+					Default = 1,
+				},
+				Input12 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "StyledText",
+				},
+				Input13 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Font",
+					ControlGroup = 11,
+				},
+				Input14 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Style",
+					ControlGroup = 11,
+				},
+				Input15 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Red1Clone",
+					Name = "Color",
+					ControlGroup = 12,
+					Default = 1,
+				},
+				Input16 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Green1Clone",
+					ControlGroup = 12,
+					Default = 1,
+				},
+				Input17 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Blue1Clone",
+					ControlGroup = 12,
+					Default = 1,
+				},
+				Input18 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Alpha1Clone",
+					ControlGroup = 12,
+					Default = 1,
+				},
+				Input19 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Size",
+					Default = 0.08,
+				},
+				Input20 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Direction",
+					Default = 0,
+				},
+				Input21 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "LineDirection",
+					Default = 0,
+				},
+				Input22 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "FontFeatures",
+					DefaultText = "",
+				},
+				Input23 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "LayoutType",
+					Name = "Type",
+				},
+				Input24 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Center",
+					Name = "Center",
+				},
+				Input25 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "CenterZ",
+					Name = "Center Z",
+					Default = 0,
+				},
+				Input26 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "LayoutSize",
+					Name = "Size",
+					Default = 1,
+				},
+				Input27 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Red",
+					Name = "Color",
+					ControlGroup = 21,
+					Default = 0,
+				},
+				Input28 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Green",
+					Name = "Color",
+					ControlGroup = 21,
+					Default = 0,
+				},
+				Input29 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Blue",
+					Name = "Color",
+					ControlGroup = 21,
+					Default = 0,
+				},
+				Input30 = InstanceInput {
+					SourceOp = "Text1",
+					Source = "Alpha",
+					Name = "Color",
+					ControlGroup = 21,
+					Default = 0,
+				},
+				Input31 = InstanceInput {
+					SourceOp = "Shadow1",
+					Source = "ShadowOffset",
+				},
+				Input32 = InstanceInput {
+					SourceOp = "Shadow1",
+					Source = "Softness",
+					Default = 0.02598,
+				},
+				Input33 = InstanceInput {
+					SourceOp = "Shadow1",
+					Source = "Red",
+					Name = "Shadow Color",
+					ControlGroup = 24,
+					Default = 0,
+				},
+				Input34 = InstanceInput {
+					SourceOp = "Shadow1",
+					Source = "Green",
+					Name = "Shadow Color",
+					ControlGroup = 24,
+					Default = 0,
+				},
+				Input35 = InstanceInput {
+					SourceOp = "Shadow1",
+					Source = "Blue",
+					Name = "Shadow Color",
+					ControlGroup = 24,
+					Default = 0,
+				},
+				Input36 = InstanceInput {
+					SourceOp = "Shadow1",
+					Source = "Alpha",
+					Name = "Shadow Color",
+					ControlGroup = 24,
+					Default = 1,
+				},
+				Input37 = InstanceInput {
+					SourceOp = "Merge1",
+					Source = "Size",
+					Default = 1,
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Merge1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				Background1 = Background {
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 275, 49.5 } },
+				},
+				SoftGlow1 = SoftGlow {
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						Threshold = Input { Value = 1, },
+						Gain = Input { Value = 2.165, },
+						XGlowSize = Input { Value = 31.5, },
+						Input = Input {
+							SourceOp = "Text1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 330, 115.5 } },
+				},
+				Text1 = TextPlus {
+					Inputs = {
+						MotionBlur = Input { Value = 1, },
+						Quality = Input { Value = 8, },
+						ShutterAngle = Input { Value = 330, },
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						LayoutRotation = Input { Value = 1, },
+						AngleZ = Input {
+							SourceOp = "Text1LayoutAngleZ",
+							Source = "Value",
+						},
+						TransformRotation = Input { Value = 1, },
+						CharacterRotationOrder = Input {
+							SourceOp = "Text1CharacterRotationOrder",
+							Source = "Value",
+						},
+						CharacterAngleX = Input {
+							SourceOp = "Text1CharacterAngleX",
+							Source = "Value",
+						},
+						CharacterAngleY = Input {
+							SourceOp = "Text1CharacterAngleY",
+							Source = "Value",
+						},
+						CharacterAngleZ = Input {
+							SourceOp = "Text1CharacterAngleZ",
+							Source = "Value",
+						},
+						Opacity1 = Input {
+							SourceOp = "Text1Opacity1",
+							Source = "Value",
+						},
+						Type1 = Input { Value = 2, },
+						ShadingGradient1 = Input {
+							Value = Gradient {
+								Colors = {
+									[0] = { 1, 0, 0.866666666666667, 1 },
+									[1] = { 0, 1, 0.933333333333333, 1 }
+								}
+							},
+						},
+						Softness1 = Input { Value = 1, },
+						Shear1 = Input { Value = 1, },
+						StyledText = Input { Value = "spinning letters", },
+						Font = Input { Value = "Monoton", },
+						Style = Input { Value = "Regular", },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, },
+						AdvancedFontControls = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 220, 115.5 } },
+				},
+				Text1LayoutAngleZ = BezierSpline {
+					SplineColor = { Red = 177, Green = 235, Blue = 6 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[2] = { 0, Flags = { Linear = true } }
+					}
+				},
+				Text1CharacterRotationOrder = BezierSpline {
+					SplineColor = { Red = 23, Green = 53, Blue = 243 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[2] = { 0, Flags = { Linear = true } }
+					}
+				},
+				Text1CharacterAngleX = BezierSpline {
+					SplineColor = { Red = 28, Green = 216, Blue = 243 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[2] = { -151.3, RH = { 9.66666666666667, -100.866666666667 }, Flags = { Linear = true } },
+						[25] = { 0, LH = { 17.3333333333333, -50.4333333333333 }, RH = { 48.3333333333333, 0 }, Flags = { Linear = true } },
+						[95] = { 0, LH = { 71.6666666666667, 0 }, RH = { 103, -29.5666666666667 }, Flags = { Linear = true } },
+						[119] = { -88.7, LH = { 111, -59.1333333333333 }, Flags = { Linear = true } }
+					}
+				},
+				Text1CharacterAngleY = BezierSpline {
+					SplineColor = { Red = 28, Green = 132, Blue = 243 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[2] = { -91.3, RH = { 9.66666666666667, -60.8666666666667 }, Flags = { Linear = true } },
+						[25] = { 0, LH = { 17.3333333333333, -30.4333333333333 }, RH = { 48.3333333333333, 0 }, Flags = { Linear = true } },
+						[95] = { 0, LH = { 71.6666666666667, 0 }, RH = { 103, 86.9666666666667 }, Flags = { Linear = true } },
+						[119] = { 260.9, LH = { 111, 173.933333333333 }, Flags = { Linear = true } }
+					}
+				},
+				Text1CharacterAngleZ = BezierSpline {
+					SplineColor = { Red = 28, Green = 53, Blue = 243 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[2] = { -125.2, RH = { 9.66666666666667, -83.4666666666667 }, Flags = { Linear = true } },
+						[25] = { 0, LH = { 17.3333333333333, -41.7333333333333 }, RH = { 48.3333333333333, 0 }, Flags = { Linear = true } },
+						[95] = { 0, LH = { 71.6666666666667, 0 }, RH = { 103, 29.5666666666667 }, Flags = { Linear = true } },
+						[119] = { 88.7, LH = { 111, 59.1333333333333 }, Flags = { Linear = true } }
+					}
+				},
+				Text1Opacity1 = BezierSpline {
+					SplineColor = { Red = 179, Green = 28, Blue = 244 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0.512, RH = { 3.33333333333333, 0.674666666666667 }, Flags = { Linear = true } },
+						[10] = { 1, LH = { 6.66666666666667, 0.837333333333333 }, RH = { 43.3333333333333, 1 }, Flags = { Linear = true } },
+						[110] = { 1, LH = { 76.6666666666667, 1 }, RH = { 113, 0.666666666666667 }, Flags = { Linear = true } },
+						[119] = { 0, LH = { 116, 0.333333333333333 }, Flags = { Linear = true } }
+					}
+				},
+				Shadow1 = Shadow {
+					CtrlWZoom = false,
+					Inputs = {
+						MotionBlur = Input { Value = 1, },
+						Quality = Input { Value = 8, },
+						ShutterAngle = Input { Value = 280, },
+						Softness = Input { Value = 0.02598, },
+						Input = Input {
+							SourceOp = "SoftGlow1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 440, 115.5 } },
+				},
+				Merge1 = Merge {
+					Inputs = {
+						Background = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Shadow1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+						Comments = Input { Value = "trim the middle part of the crop for shorter duration", }
+					},
+					ViewInfo = OperatorInfo { Pos = { 440, 49.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "spinningtext"
+}

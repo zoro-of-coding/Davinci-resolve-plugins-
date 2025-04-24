@@ -1,0 +1,88 @@
+{
+	Tools = ordered() {
+		warmred = MacroOperator {
+			Inputs = ordered() {
+				MainInput1 = InstanceInput {
+					SourceOp = "ColorCorrector1",
+					Source = "Input",
+				},
+				MainInput2 = InstanceInput {
+					SourceOp = "ColorCorrector1",
+					Source = "MatchReference",
+				},
+				Input1 = InstanceInput {
+					SourceOp = "ColorCorrector1",
+					Source = "EffectMask",
+				},
+				Input2 = InstanceInput {
+					SourceOp = "ColorCorrector1",
+					Source = "MatchMask",
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "SoftGlow1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				ColorCorrector1 = ColorCorrector {
+					Inputs = {
+						WheelTintAngle1 = Input { Value = 2.098716, },
+						WheelTintLength1 = Input { Value = 0.1552, },
+						Channel = Input { Value = 1, },
+						MasterRedContrast = Input { Value = 1.35, },
+						MasterRedGain = Input { Value = 0.9, },
+						MasterRedLift = Input { Value = -0.2, },
+						MasterRedGamma = Input { Value = 1.6, },
+						MasterRedBrightness = Input { Value = 0.27, },
+						MasterGreenContrast = Input { Value = 0.94, },
+						MasterGreenGain = Input { Value = 0.98, },
+						MasterGreenGamma = Input { Value = 0.8, },
+						MasterGreenBrightness = Input { Value = 0.01, },
+						MasterBlueBrightness = Input { Value = -0.02, },
+						ColorRanges = Input {
+							Value = ColorCurves {
+								Curves = {
+									{
+										Points = {
+											{ 0, 1 },
+											{ 0.497, 0 },
+											{ 0.6, 0 },
+											{ 1, 0 }
+										}
+									},
+									{
+										Points = {
+											{ 0, 0 },
+											{ 0.4, 0 },
+											{ 0.6, 0.2 },
+											{ 1, 1 }
+										}
+									}
+								}
+							},
+						},
+						HistogramIgnoreTransparent = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 275, 214.5 } },
+				},
+				SoftGlow1 = SoftGlow {
+					CtrlWZoom = false,
+					Inputs = {
+						Blend = Input { Value = 0.016, },
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						Gain = Input { Value = 1.575, },
+						Input = Input {
+							SourceOp = "ColorCorrector1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 385, 214.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "warmred"
+}

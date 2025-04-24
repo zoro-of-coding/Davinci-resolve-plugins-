@@ -1,0 +1,207 @@
+{
+	Tools = ordered() {
+		runningborder = MacroOperator {
+			Inputs = ordered() {
+				Input1 = InstanceInput {
+					SourceOp = "Background1",
+					Source = "TopLeftRed",
+					Name = "Color",
+					ControlGroup = 1,
+					Default = 0,
+				},
+				MainInput1 = InstanceInput {
+					SourceOp = "Paint2",
+					Source = "Input",
+				},
+				Input2 = InstanceInput {
+					SourceOp = "PolylineStroke1",
+					Source = "SoftBrush.VarySize",
+					Default = 0,
+				},
+				Input3 = InstanceInput {
+					SourceOp = "PolylineStroke1",
+					Source = "SoftBrush.VaryOpacity",
+					Default = 1,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "PolylineStroke1",
+					Source = "SoftBrush.Size",
+					Default = 0.02,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "PolylineStroke1",
+					Source = "SoftBrush.Softness",
+					Default = 1,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "PolylineStroke1",
+					Source = "PaintApplyColor.Red",
+					Name = "Color",
+					ControlGroup = 7,
+					Default = 1,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "PolylineStroke1",
+					Source = "PaintApplyColor.Green",
+					Name = "Color",
+					ControlGroup = 7,
+					Default = 1,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "PolylineStroke1",
+					Source = "PaintApplyColor.Blue",
+					Name = "Color",
+					ControlGroup = 7,
+					Default = 0,
+				},
+				Input9 = InstanceInput {
+					SourceOp = "PolylineStroke1",
+					Source = "PaintApplyColor.Alpha",
+					Name = "Color",
+					ControlGroup = 7,
+					Default = 1,
+				},
+				Input10 = InstanceInput {
+					SourceOp = "PolylineStroke1",
+					Source = "WriteOnStart",
+					ControlGroup = 7,
+					Default = 0,
+				},
+				Input11 = InstanceInput {
+					SourceOp = "PolylineStroke1",
+					Source = "WriteOnEnd",
+					ControlGroup = 7,
+					Default = 1,
+				},
+				Input12 = InstanceInput {
+					SourceOp = "PolylineStroke1",
+					Source = "PaintApplyColor.Opacity",
+					Default = 1,
+				},
+				Input13 = InstanceInput {
+					SourceOp = "PolylineStroke1",
+					Source = "StrokeAngle",
+				},
+				Input14 = InstanceInput {
+					SourceOp = "PolylineStroke1",
+					Source = "StrokeSize",
+					Default = 1,
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Paint2",
+					Source = "Output",
+				},
+				Output1 = InstanceOutput {
+					SourceOp = "PolylineStroke1Start",
+					Source = "Value",
+				},
+				Output2 = InstanceOutput {
+					SourceOp = "PolylineStroke1End",
+					Source = "Value",
+				},
+				MainOutput2 = InstanceOutput {
+					SourceOp = "SoftGlow1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				Background1 = Background {
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0.05, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 275, 115.5 } },
+				},
+				Paint2 = Paint {
+					Inputs = {
+						Input = Input {
+							SourceOp = "Background1",
+							Source = "Output",
+						},
+						Paint = Input {
+							SourceOp = "PolylineStroke1",
+							Source = "Out",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 385, 115.5 } },
+				},
+				PolylineStroke1 = PolylineStroke {
+					Points = {
+					},
+					IsThreaded = false,
+					Brushes = { "SoftBrush" },
+					ApplyModes = { "PaintApplyColor" },
+					CtrlWZoom = false,
+					Inputs = {
+						MotionBlur = Input { Value = 1, },
+						Quality = Input { Value = 10, },
+						ShutterAngle = Input { Value = 360, },
+						["PaintApplyColor.Blue"] = Input { Value = 0, },
+						StrokeControls = Input { Value = 1, },
+						WriteOnStart = Input {
+							SourceOp = "PolylineStroke1Start",
+							Source = "Value",
+						},
+						WriteOnEnd = Input {
+							SourceOp = "PolylineStroke1End",
+							Source = "Value",
+						},
+						Polyline = Input {
+							Value = Polyline {
+								Closed = true,
+								Points = {
+									{ Linear = true, X = -0.455678670360111, Y = -0.426108374384236, LX = 0.303785780240074, LY = -0.00164203612479473, RX = -1.85037170770859e-17, RY = 0.282430213464696 },
+									{ Linear = true, X = -0.455678670360111, Y = 0.421182266009852, LX = 1.85037170770859e-17, LY = -0.282430213464696, RX = 0.303785780240074, RY = 0.00164203612479474 },
+									{ Linear = true, X = 0.455678670360111, Y = 0.426108374384236, LX = -0.303785780240074, LY = -0.00164203612479474, RX = -5.55111512312578e-17, RY = -0.285714285714286 },
+									{ Linear = true, X = 0.455678670360111, Y = -0.431034482758621, LX = 5.55111512312578e-17, LY = 0.285714285714286, RX = -0.303785780240074, RY = 0.00164203612479473 }
+								}
+							},
+						}
+					},
+				},
+				PolylineStroke1Start = BezierSpline {
+					SplineColor = { Red = 232, Green = 6, Blue = 244 },
+					CtrlWZoom = false,
+					NameSet = true,
+					KeyFrames = {
+						[0] = { 0, RH = { 1.66666666666667, 0 }, Flags = { Linear = true, Loop = true } },
+						[5] = { 0, LH = { 3.33333333333333, 0 }, RH = { 10, 0.320333333333333 }, Flags = { Linear = true } },
+						[20] = { 0.961, LH = { 15, 0.640666666666667 }, RH = { 20.3333333333333, 0.640666666666667 }, Flags = { Linear = true } },
+						[21] = { 0, LH = { 20.6666666666667, 0.320333333333333 }, Flags = { Linear = true, Loop = true } }
+					}
+				},
+				PolylineStroke1End = BezierSpline {
+					SplineColor = { Red = 72, Green = 233, Blue = 54 },
+					CtrlWZoom = false,
+					NameSet = true,
+					KeyFrames = {
+						[0] = { 0, RH = { 1.66666666666667, 0.013 }, Flags = { Linear = true, Loop = true } },
+						[5] = { 0.039, LH = { 3.33333333333333, 0.026 }, RH = { 10, 0.359333333333333 }, Flags = { Linear = true } },
+						[20] = { 1, LH = { 15, 0.679666666666667 }, RH = { 20.3333333333333, 0.683333333333333 }, Flags = { Linear = true } },
+						[21] = { 0.05, LH = { 20.6666666666667, 0.366666666666667 }, Flags = { Linear = true, Loop = true } }
+					}
+				},
+				SoftGlow1 = SoftGlow {
+					CtrlWZoom = false,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						Threshold = Input { Value = 0.126, },
+						Gain = Input { Value = 1.85, },
+						Input = Input {
+							SourceOp = "Paint2",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 495, 115.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "runningborder"
+}

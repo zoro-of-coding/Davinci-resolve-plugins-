@@ -1,0 +1,102 @@
+{
+	Tools = ordered() {
+		Slowshutter = MacroOperator {
+			Inputs = ordered() {
+				MainInput1 = InstanceInput {
+					SourceOp = "StopMotion1",
+					Source = "Source",
+				},
+				Input2 = InstanceInput {
+					SourceOp = "StopMotion1",
+					Source = "frameRepeat",
+					Default = 6,
+				},
+				Input3 = InstanceInput {
+					SourceOp = "StopMotion1",
+					Source = "MotionBlur",
+					Default = 0,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "StopMotion1",
+					Source = "Quality",
+					Default = 2,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "StopMotion1",
+					Source = "ShutterAngle",
+					Default = 180,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "StopMotion1",
+					Source = "CenterBias",
+					Default = 0,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "StopMotion1",
+					Source = "SampleSpread",
+					Default = 1,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "FrameAverage1",
+					Source = "Frames",
+					MaxScale = 10,
+					Default = 5,
+				},
+				Input9 = InstanceInput {
+					SourceOp = "FrameAverage1",
+					Source = "Comments",
+				},
+				Input1 = InstanceInput {
+					SourceOp = "StopMotion1",
+					Source = "EffectMask",
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "FrameAverage1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				StopMotion1 = ofx.com.blackmagicdesign.resolvefx.StopMotion {
+					Inputs = {
+						Blend = Input { Value = 0, },
+						advancedGroup = Input { Value = 1, },
+						setReferenceButton = Input { Value = 0, },
+						referenceFrame = Input {
+							Value = 0,
+							Disabled = true,
+						},
+						frameRepeatVar = Input { Value = 0, },
+						frameRepeat = Input { Value = 6, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						IsNoTemporalFramesReqd = Input { Value = 0, },
+						refreshTrigger = Input { Value = 1, },
+						srcProcessingAlphaMode = Input { Value = -1, },
+						dstProcessingAlphaMode = Input { Value = -1, },
+						resolvefxVersion = Input { Value = "1.0", }
+					},
+					ViewInfo = OperatorInfo { Pos = { 275, 49.5 } },
+				},
+				FrameAverage1 = Fuse.FrameAverage {
+					CtrlWZoom = false,
+					Inputs = {
+						Frames = Input { Value = 5, },
+						Input = Input {
+							SourceOp = "StopMotion1",
+							Source = "Output",
+						},
+						Comments = Input { Value = "BY KINGOFTHEHELL", }
+					},
+					ViewInfo = OperatorInfo { Pos = { 385, 49.5 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "Slowshutter"
+}
